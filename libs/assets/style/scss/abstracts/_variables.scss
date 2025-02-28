@@ -1,0 +1,187 @@
+@use "functions" as functions;
+
+// Fonts - Base Size
+$base-size: 16px;
+// TO DO : 기존 선언 정리
+// Font - Size Variations
+// $font-headline-01: functions.toRem(24);
+// $font-headline-02: functions.toRem(20);
+// $font-headline-03: functions.toRem(18);
+
+// $font-body-16: functions.toRem(16);
+// $font-body-14: functions.toRem(14);
+// $font-body-13: functions.toRem(13);
+// $font-body-12: functions.toRem(12);
+
+// Fonts- Weights
+$font-weight-01: 100;
+$font-weight-02: 200;
+$font-weight-03: 300;
+$font-weight-04: 400;
+$font-weight-05: 500;
+$font-weight-06: 600;
+$font-weight-07: 700;
+$font-weight-08: 800;
+$font-weight-09: 900;
+
+// Colors
+$color-primary: #e30084;
+$color-secondary: #1e1a3a;
+
+$color-black: #000;
+$color-white: #fff;
+$color-aaa: #aaa;
+$color-eee: #eee;
+$color-666: #666;
+
+//
+// Design Tokens
+//
+$color_frame_neutral: #fff;
+$color_frame_neutral_1: #f9fafb;
+$color_frame_neutral_2: #f9fafb;
+$color_frame_neutral_3: #f9fafb;
+
+$color_container_primary: #e30084;
+$color_container_primary_low: #fdedf6;
+$color_container_secondary: #1e1a34;
+$color_container_neutral: #fff;
+$color_container_neutral_1: #f9fafb;
+$color_container_neutral_2: #f3f5f6;
+$color_container_neutral_3: #dce0e5;
+$color_container_neutral_4: #a8b3bd;
+$color_container_neutral_5: #66707a;
+$color_container_neutral_6: #181a1b; //$color_bluegray_900;
+$color_container_linked: #fff;
+
+$color_text_primary: #e30084;
+$color_text_onPrimary: #fff;
+$color_text_secondary: #1e1a34;
+$color_text_neutral: #fff;
+$color_text_neutral_1: #a8b3bd;
+$color_text_neutral_2: #7f8a94;
+$color_text_neutral_3: #66707a;
+$color_text_neutral_4: #525960;
+$color_text_neutral_5: #3b4044;
+$color_text_neutral_6: #181a1b;
+
+$color_border_primary: #e30084;
+$color_border_primary_low: #fbdaed; //$color_magenta_100
+$color_border_secondary: #1e1a34;
+$color_border_neutral: #fff;
+$color_border_neutral_1: #f3f5f6;
+$color_border_neutral_2: #e7ebee;
+$color_border_neutral_3: #dce0e5;
+$color_border_neutral_4: #a8b3bd;
+$color_border_neutral_5: #7f8a94;
+$color_border_neutral_6: #181a1b;
+
+$color_icon_primary: #e30084;
+$color_icon_secondary: #1e1a34;
+$color_icon_neutral: #ffffff;
+$color_icon_neutral_1: #e7ebee;
+$color_icon_neutral_2: #a8b3bd;
+$color_icon_neutral_3: #7f8a94;
+$color_icon_neutral_4: #181a1b;
+
+$color_custom_container_1: #d62663; // Pink
+$color_custom_container_2: #e80404; // Red
+$color_custom_container_3: #d14200; // Orange
+$color_custom_container_4: #a76604; // Yellow Ocher
+$color_custom_container_5: #02880e; // Green
+$color_custom_container_6: #027d7d; // Surfie Green
+$color_custom_container_7: #287da0; // Turquoise
+$color_custom_container_8: #4865e5; // Dodger Blue
+$color_custom_container_9: #0066cc; // Blue
+$color_custom_container_10: #1b3aa5; // Dark Blue
+$color_custom_container_11: #7c37d5; // Purple Heart
+$color_custom_container_12: #522ea7; // Purple
+$color_custom_container_13: #5257a1; // Medium Purple
+
+$color_customContainer: initial;
+$color_customText: initial;
+$color_customBorder: initial;
+$color_customIcon: initial;
+
+// Status
+$status_success: #00aa02;
+$status_success_low: #f6fef6;
+$status_onSuccess_high: #256023;
+$status_warning: #f86800;
+$status_warning_low: #fff9f5;
+$status_onWarning_high: #773506;
+$status_error: #e22a21;
+$status_error_low: #fef6f6;
+$status_onError_high: #a71009;
+$status_info: #0146d0;
+$status_info_low: #f5f8fe;
+$status_onInfo_high: #013aad;
+$status_onFixedStatus: #fff;
+$status_disabled: #f3f5f6;
+$status_onDisabled: #a8b3bd;
+$status_onDisabled_low: #fff;
+
+// State
+$stateLayer_hover_low: rgba(255, 255, 255, 0.06);
+$stateLayer_hover_high: rgba(24, 26, 27, 0.06);
+$stateLayer_pressed_low: rgba(255, 255, 255, 0.12);
+$stateLayer_pressed_high: rgba(24, 26, 27, 0.12);
+$stateLayer_dimmed_low: rgba(0, 0, 0, 0.42);
+$stateLayer_dimmed_high: rgba(0, 0, 0, 0.6);
+$stateLayer_selected_primary: rgba(
+  230,
+  0,
+  126,
+  0.06
+); //figma 디자인에서 직접 추가. 확인 필요.
+$state_selected_primary: #e30084;
+$state_selected_secondary: #1e1a34;
+$state_onFixedSelected: #fff;
+$state_checked_primary: #e30084;
+$state_checked_secondary: #1e1a34;
+$state_onFixedChecked: #fff;
+$state_focused_primary: #e30084;
+$state_focused_secondary: #1e1a34;
+$state_onFixedFocused: #fff;
+
+$state_primary_solid_hover: #d90377;
+$state_primary_low_solid_hover: #efdfe9;
+$state_neutral_hover: #e5e8e9;
+$state_outline_hover: #f1f1f1;
+
+// Shape
+$shape_borderRadius_xxSmall: 4px;
+$shape_borderRadius_xSmall: 6px;
+$shape_borderRadius_small: 8px;
+$shape_borderRadius_medium: 12px;
+$shape_borderRadius_large: 16px;
+$shape_borderRadius_full: 999px;
+
+$shape_borderWidth_small: 1px;
+$shape_borderWidth_medium: 2px;
+$shape_borderWidth_large: 3px;
+
+// Shadow
+$shadow_boxshadow_1: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+$shadow_boxshadow_2: 3px 6px 28px 0px rgba(0, 0, 0, 0.08);
+$shadow_boxshadow_3: 0px 10px 16px 0px rgba(0, 0, 0, 0.12);
+$shadow_boxshadow_4: 0px 16px 34px 0px rgba(0, 0, 0, 0.16);
+$shadow_boxshadow_5: 0px 18px 50px 0px rgba(0, 0, 0, 0.26); //figma의 Tokens studio에서 직접 갖고옴. 확인 필요.
+
+// z-index
+$zindex_0: 0;
+$zindex_10: 10;
+$zindex_20: 20;
+$zindex_30: 30;
+$zindex_40: 40;
+$zindex_50: 50;
+$zindex_60: 60;
+$zindex_70: 70;
+$zindex_80: 80;
+$zindex_90: 90;
+
+// Animation
+$transition-basic: transform 300ms cubic-bezier(0.87, 0, 0.13, 1) 0s;
+
+// Spacing
+$spacing-values: (0, 2, 4, 8, 12, 16, 20, 24, 28, 32, 40, 44, 48, 56);

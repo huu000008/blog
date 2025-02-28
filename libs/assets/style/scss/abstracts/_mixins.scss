@@ -1,0 +1,139 @@
+@use 'variables' as *;
+// ScreenReader
+@mixin sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin ico-check(
+  $border-color: #000,
+  $border-weight: 2px,
+  $border-width: 8px,
+  $border-height: 16px
+) {
+  content: '';
+  display: inline-block;
+  margin: 0 8px;
+  border-style: solid;
+  border-color: $border-color;
+  border-width: 0px $border-weight $border-weight 0px;
+  width: $border-width;
+  height: $border-height;
+  transform: rotate(45deg);
+}
+
+@mixin ico-close(
+  $size: 10px,
+  $weight: 1px,
+  $color: #333,
+  $rate: 1,
+  $radius: false
+) {
+  $close-height: $size * $rate;
+  $close-width: $weight * $rate;
+  $close-radius: $weight * $rate / 2;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    @if ($rate == 1) {
+      //기존 내용 유지
+      right: 50%;
+    } @else {
+      left: 50%;
+    }
+    top: 50%;
+    height: $close-height;
+    width: $close-width;
+    @if ($rate == 1) {
+      margin: -$size/2 0 0 $weight; //기존 내용 유지
+    }
+    @if ($radius != false) {
+      border-radius: $close-radius;
+    }
+    background-color: $color;
+  }
+  @if ($rate == 1) {
+    //기존 내용 유지
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  } @else {
+    &:before {
+      transform: translate(-50%, -50%) scale(1 / $rate) rotate(45deg);
+    }
+    &:after {
+      transform: translate(-50%, -50%) scale(1 / $rate) rotate(-45deg);
+    }
+  }
+}
+
+@mixin ico-arrow-up($size, $color, $weight: 1px) {
+  content: '';
+  display: block;
+  width: $size;
+  height: $size;
+  border: 1px solid $color;
+  border-width: $weight 0 0 $weight;
+  transform: rotate(45deg) translateZ(0);
+}
+
+@mixin ico-arrow-down($size, $color, $weight: 1px) {
+  content: '';
+  display: block;
+  width: $size;
+  height: $size;
+  border: 1px solid $color;
+  border-width: $weight 0 0 $weight;
+  transform: rotate(225deg) translateZ(0);
+}
+
+@mixin ico-arrow-left($size, $color, $weight: 1px) {
+  content: '';
+  width: $size;
+  height: $size;
+  border: 1px solid $color;
+  border-width: $weight $weight 0 0;
+  transform: rotate(225deg) translateZ(0);
+}
+
+@mixin ico-arrow-right($size, $color, $weight: 1px) {
+  content: '';
+  width: $size;
+  height: $size;
+  border: 1px solid $color;
+  border-width: $weight $weight 0 0;
+  transform: rotate(45deg) translateZ(0);
+}
+
+@mixin text-ellipsis-multiple($line) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  white-space: initial;
+}
+
+@mixin add-spacing($base-class) {
+  @each $value in $spacing-values {
+    #{$base-class}--spacing-#{$value} {
+      margin-top: #{$value}px;
+    }
+  }
+}

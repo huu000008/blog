@@ -1,0 +1,265 @@
+@use '../abstracts/functions' as *;
+//
+// Typography
+//
+$font_size_3xLarge: toRem(28);
+$font_size_2xLarge: toRem(24);
+$font_size_xLarge: toRem(20);
+$font_size_large: toRem(18);
+$font_size_medium: toRem(16);
+$font_size_small: toRem(14);
+$font_size_xSmall: toRem(12);
+$font_size_2xSmall: toRem(10);
+
+$font_weight_bold: 700;
+$font_weight_semibold: 600;
+$font_weight_medium: 500;
+
+$font_lineHeight: normal;
+$font_lineHeight_small: 1.4;
+$font_lineHeight_medium: 1.5;
+
+$font_letterSpacing: 0;
+
+//
+// Typography - Defaults
+//
+@mixin font_heading_default() {
+  line-height: $font_lineHeight_small;
+  letter-spacing: $font_letterSpacing;
+}
+
+@mixin font_body_default() {
+  line-height: $font_lineHeight_medium;
+  letter-spacing: $font_letterSpacing;
+}
+
+@mixin font_label_default() {
+  line-height: $font_lineHeight;
+  letter-spacing: $font_letterSpacing;
+}
+
+@mixin font_detail_default() {
+  line-height: $font_lineHeight_medium;
+  letter-spacing: $font_letterSpacing;
+}
+
+//
+// Typography - Heading
+//
+@mixin font_heading_1B() {
+  font-size: $font_size_3xLarge;
+  font-weight: $font_weight_bold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_2B() {
+  font-size: $font_size_2xLarge;
+  font-weight: $font_weight_bold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_3B() {
+  font-size: $font_size_xLarge;
+  font-weight: $font_weight_bold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_4B() {
+  font-size: $font_size_large;
+  font-weight: $font_weight_bold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_5B() {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_bold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_6B() {
+  font-size: $font_size_small;
+  font-weight: $font_weight_bold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_1Sb() {
+  font-size: $font_size_3xLarge;
+  font-weight: $font_weight_semibold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_2Sb() {
+  font-size: $font_size_2xLarge;
+  font-weight: $font_weight_semibold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_3Sb() {
+  font-size: $font_size_xLarge;
+  font-weight: $font_weight_semibold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_4Sb() {
+  font-size: $font_size_large;
+  font-weight: $font_weight_semibold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_5Sb() {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_semibold;
+  @include font_heading_default();
+}
+
+@mixin font_heading_6Sb() {
+  font-size: $font_size_small;
+  font-weight: $font_weight_semibold;
+  @include font_heading_default();
+}
+
+//
+// Typography - Body
+//
+@mixin font_body_1B() {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_bold;
+  @include font_body_default();
+}
+
+@mixin font_body_2B() {
+  font-size: $font_size_small;
+  font-weight: $font_weight_bold;
+  @include font_body_default();
+}
+
+@mixin font_body_3B() {
+  font-size: $font_size_xSmall;
+  font-weight: $font_weight_bold;
+  @include font_body_default();
+}
+
+@mixin font_body_1Sb() {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_semibold;
+  @include font_body_default();
+}
+
+@mixin font_body_2Sb() {
+  font-size: $font_size_small;
+  font-weight: $font_weight_semibold;
+  @include font_body_default();
+}
+
+@mixin font_body_3Sb() {
+  font-size: $font_size_xSmall;
+  font-weight: $font_weight_semibold;
+  @include font_body_default();
+}
+
+@mixin font_body_1M() {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_medium;
+  @include font_body_default();
+}
+
+@mixin font_body_2M() {
+  font-size: $font_size_small;
+  font-weight: $font_weight_medium;
+  @include font_body_default();
+}
+
+@mixin font_body_3M() {
+  font-size: $font_size_xSmall;
+  font-weight: $font_weight_medium;
+  @include font_body_default();
+}
+
+//
+// Typography - Label
+//
+@mixin font_label_1Sb() {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_semibold;
+  @include font_label_default();
+}
+@mixin font_label_2Sb() {
+  font-size: $font_size_small;
+  font-weight: $font_weight_semibold;
+  @include font_label_default();
+}
+@mixin font_label_3Sb() {
+  font-size: $font_size_xSmall;
+  font-weight: $font_weight_semibold;
+  @include font_label_default();
+}
+@mixin font_label_4Sb() {
+  font-size: $font_size_2xSmall;
+  font-weight: $font_weight_bold;
+  @include font_label_default();
+}
+@mixin font_label_1M() {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_medium;
+  @include font_label_default();
+}
+@mixin font_label_2M() {
+  font-size: $font_size_small;
+  font-weight: $font_weight_medium;
+  @include font_label_default();
+}
+@mixin font_label_3M() {
+  font-size: $font_size_xSmall;
+  font-weight: $font_weight_medium;
+  @include font_label_default();
+}
+
+//
+// Typography - Detail
+//
+@mixin font_detail_1B() {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_bold;
+  @include font_detail_default();
+}
+@mixin font_detail_2B() {
+  font-size: $font_size_small;
+  font-weight: $font_weight_bold;
+  @include font_detail_default();
+}
+@mixin font_detail_3B() {
+  font-size: $font_size_xSmall;
+  font-weight: $font_weight_bold;
+  @include font_detail_default();
+}
+@mixin font_detail_1Sb() {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_semibold;
+  @include font_detail_default();
+}
+@mixin font_detail_2Sb() {
+  font-size: $font_size_small;
+  font-weight: $font_weight_semibold;
+  @include font_detail_default();
+}
+@mixin font_detail_3Sb() {
+  font-size: $font_size_xSmall;
+  font-weight: $font_weight_semibold;
+  @include font_detail_default();
+}
+@mixin font_detail_1M() {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_medium;
+  @include font_detail_default();
+}
+@mixin font_detail_2M() {
+  font-size: $font_size_small;
+  font-weight: $font_weight_medium;
+  @include font_detail_default();
+}
+@mixin font_detail_3M() {
+  font-size: $font_size_xSmall;
+  font-weight: $font_weight_medium;
+  @include font_detail_default();
+}
